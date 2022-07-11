@@ -1,0 +1,26 @@
+
+
+ /*******************************************
+ *
+ *  ========= SQLBootcamp.online ============
+ *
+ *  000_BasicSetup.sql - Initial Script
+ *  Source: https://github.com/ludwikc/sqlbootcamp-online/
+ *
+ *******************************************/
+  
+  
+ -- Check if the EnjoyTheMadness exits, and if not - create one.
+ USE [master]
+ IF NOT EXISTS
+    (SELECT * FROM sys.databases WHERE name = 'EnjoyTheMadness')
+   BEGIN
+    CREATE DATABASE [EnjoyTheMadness]
+   END
+ GO
+ 
+ -- Switch the context to SQLBootcampDB
+ USE [EnjoyTheMadness]
+ GO
+ 
+ 
